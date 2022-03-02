@@ -1,0 +1,10 @@
+#Q2
+#Using the dictionary created in the previous problem, allow the user to enter a dollar amount
+#and print out all the products whose price is less than that amount.
+
+my_dict={'phone':'100', 'cables':'50', 'earphones':'150'}
+print(my_dict)
+amount=eval(input("enter an amount:Rs. "))
+for key, values in my_dict.items():
+  if int(values)<amount:
+    print(key ,"=",values)
