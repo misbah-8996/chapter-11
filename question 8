@@ -1,0 +1,22 @@
+#Q8
+#Using the card dictionary from earlier in this chapter, create a simple card game that deals
+#two players three cards each. The player with the highest card wins. If there is a tie, then
+#compare the second highest card and, if necessary, the third highest. If all three cards have
+#the same value, then the game is a draw
+import random
+
+all_cards ={"One":1,"Two":2,"Three":3,"Four":4,"Five":5,"Six":6,"Seven":7,"Eight":8,"Nine":9}
+cards = 3
+player1 =[]
+player2 =[]
+for cards in range(cards):
+    c1 =random.choice(list(all_cards.values()))
+    c2= random.choice(list(all_cards.values()))
+    player1.append(c1)
+    player2.append(c2)
+print(player1,player2)
+
+if sum(player1) > sum(player2):
+    print("Player 1 wins with ",sum(player1)," against Player 2 with",sum(player2),"cards")
+elif sum(player2) > sum(player1):
+    print("Player 2 wins with ",sum(player2)," against Player 1 with",sum(player1),"cards")
