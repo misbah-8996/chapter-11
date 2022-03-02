@@ -1,0 +1,29 @@
+#Q3
+#For this problem, use the dictionary from the beginning of this chapter whose keys are month
+#names and whose values are the number of days in the corresponding months.
+#(a) Ask the user to enter a month name and use the dictionary to tell them how many days
+#are in the month.
+#(b) Print out all of the keys in alphabetical order.
+#(c) Print out all of the months with 31 days.
+#(d) Print out the (key-value) pairs sorted by the number of days in each month
+import operator
+#a
+year={"jan":"31", "feb":"28", "march":"31", "april":"30", "may":"31"}
+month=input("Enter a month: ")
+for key, values in year.items():
+  if month==key:
+    print(values)
+
+#b
+sorted_year ={key:year[key] for key in sorted(year)}
+print(sorted_year.keys())
+
+#c
+for keys,values in year.items():
+    if int(values) == 31:
+
+      print(keys)
+
+#d
+sorted_bydays = dict(sorted(year.items(),key= operator.itemgetter(1)))
+print(sorted_bydays)
