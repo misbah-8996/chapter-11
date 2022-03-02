@@ -1,0 +1,19 @@
+#Q1 Write a program that repeatedly asks the user to enter product names and prices. Store all
+#of these in a dictionary whose keys are the product names and whose values are the prices.
+#When the user is done entering products and prices, allow them to repeatedly enter a product
+#name and print the corresponding price or a message if the product is not in the dictionary
+
+product_number = eval(input("Enter Number of products: "))
+my_dict ={}
+for x in range(product_number):
+    product_name = input("Enter Product Name: ")
+    product_price = int(input("Enter Product Price: "))
+    my_dict[product_name] = product_price
+product_name = input("Enter Product name to get Price: ")
+if product_name in my_dict:
+  print("The price for your product is  ", my_dict[product_name])
+
+else:
+  print("This product is not found in dictionary")
+
+print(my_dict)
