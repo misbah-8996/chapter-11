@@ -1,0 +1,17 @@
+#Q6
+#Repeatedly ask the user to enter game scores in a format like team1 score1 - team2 score2. Store
+#this information in a dictionary where the keys are the team names and the values are lists of
+#the form [wins, losses]
+
+
+num_of_teams =int(input("Enter Number Of Teams: "))
+total_teams_dict={}
+for team in range(num_of_teams):
+    team_name = input("Enter Team name: ")
+    team_scores =[]
+    wins = int(input("Enter Win: "))
+    losses = int(input("Enter Losses: "))
+    team_scores.extend((wins,losses))
+    total_teams_dict.update({team_name:team_scores})
+
+print(total_teams_dict)
